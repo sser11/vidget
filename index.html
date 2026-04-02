@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Мой Дашборд — CS2 Матчи + Авиабилеты</title>
+    <!-- Подключаем основные стили -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <!-- Шрифт и иконки для красоты -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1><i class="fas fa-chalkboard-user"></i> Тематический дашборд</h1>
+            <p>Управление виджетами + реальные API (HLTV матчи, Aviasales билеты)</p>
+            <div class="widget-controls">
+                <button id="addTodoBtn" class="btn btn-primary"><i class="fas fa-list-check"></i> Добавить ToDo</button>
+                <button id="addQuoteBtn" class="btn btn-primary"><i class="fas fa-quote-right"></i> Добавить Цитату</button>
+                <button id="addMatchesBtn" class="btn btn-primary"><i class="fas fa-gamepad"></i> Виджет матчей (HLTV)</button>
+                <button id="addTicketsBtn" class="btn btn-primary"><i class="fas fa-plane"></i> Авиабилеты LED→SPB</button>
+            </div>
+        </header>
+        <main id="dashboard-grid" class="dashboard-grid">
+            <!-- Сюда динамически будут добавляться виджеты -->
+        </main>
+    </div>
+    <!-- Подключаем главный модуль (type="module") -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
