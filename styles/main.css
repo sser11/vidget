@@ -1,0 +1,136 @@
+/* styles/main.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 24px 32px;
+}
+
+.dashboard-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1e293b, #2d3a4e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.widget-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn {
+    background: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.btn-primary {
+    background: #0f172a;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #fff0f0;
+    color: #b91c1c;
+    border-color: #fecaca;
+}
+
+.btn-danger:hover {
+    background: #fee2e2;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+/* общие стили для карточки виджета */
+.widget-card {
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.2s;
+    border: 1px solid #eef2ff;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: #fafcff;
+    border-bottom: 1px solid #eef2ff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.widget-header h3 {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.widget-actions button {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 12px;
+    color: #64748b;
+    transition: 0.1s;
+}
+
+.widget-actions button:hover {
+    color: #ef4444;
+}
+
+.widget-content {
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
