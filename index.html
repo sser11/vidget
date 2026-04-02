@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Dashboard | Авиабилеты + eBay</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Travel & Shopping Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="app-container">
-        <!-- ШАПКА -->
+    <div class="dashboard-container">
         <header class="dashboard-header">
-            <div class="header-title">
-                <i class="fas fa-globe-americas"></i>
-                <h1>Travel Assistant Dashboard</h1>
-            </div>
-            <p class="subtitle">Управление поездками: авиабилеты (Skyscanner) + товары для путешествий (eBay)</p>
-            <div class="widget-controls">
-                <button id="addTodoBtn" class="btn btn-primary"><i class="fas fa-check-circle"></i> Список дел</button>
-                <button id="addQuoteBtn" class="btn btn-primary"><i class="fas fa-quote-left"></i> Цитата дня</button>
-                <button id="addFlightBtn" class="btn btn-accent"><i class="fas fa-plane-departure"></i> Авиабилеты (API)</button>
-                <button id="addEbayBtn" class="btn btn-accent"><i class="fab fa-ebay"></i> eBay Travel (API)</button>
-            </div>
+            <h1><i class="fas fa-chalkboard-user"></i> Travel & Shopping Dashboard</h1>
+            <p>Управляйте задачами, находите авиабилеты и товары на eBay</p>
         </header>
 
-        <!-- СЕТКА ДЛЯ ВИДЖЕТОВ -->
-        <main id="dashboardGrid" class="dashboard-grid"></main>
+        <div class="controls">
+            <button class="btn btn-primary" id="addTodoWidget">
+                <i class="fas fa-list-check"></i> Добавить виджет задач
+            </button>
+            <button class="btn btn-primary" id="addFlightWidget">
+                <i class="fas fa-plane"></i> Добавить виджет авиабилетов
+            </button>
+            <button class="btn btn-primary" id="addEbayWidget">
+                <i class="fab fa-ebay"></i> Добавить виджет eBay
+            </button>
+            <button class="btn btn-danger" id="clearAllWidgets">
+                <i class="fas fa-trash-alt"></i> Очистить все виджеты
+            </button>
+        </div>
+
+        <div id="widgetsGrid" class="widgets-grid"></div>
     </div>
 
-    <!-- ПОДКЛЮЧАЕМ ГЛАВНЫЙ МОДУЛЬ (type="module") -->
     <script type="module" src="main.js"></script>
 </body>
 </html>
